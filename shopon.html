@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Shop On</title>
+	<!-- Bootstrap -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <!--External CSS-->
+	<link rel="stylesheet" type="text/css" href="assets/css/shopon.css">
+	<title>Shop On</title>
+	<script type="text/javascript" src="assets/js/shopon-js.js"></script>
+</head>
+<body onload="getData()">
+    <header>
+	<div class="header-div"><span class="shop-on-text">Shop On</span><button class="cartButton" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-shopping-cart shopping-cart"></span><p id="cartItems">0</p></button></div>
+    </header>
+
+    <section>
+	<div id="showDataDiv"></div>
+    </section>
+	<!-- <div id="showCartDetails"></div>
+    <div id="dialog" title="Basic dialog"></div> -->
+
+    <!--cart info-->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title">Cart Details</h4>
+                </div>
+                <div class="modal-body align-center" id="detailsDiv">
+                    
+                </div>
+                <div class="clr"></div>
+                <div class="modal-footer left">
+                    <label>Discount Applied is: 8&#37;</label><br>
+                    <label>Tax Applied is: 5&#37;</label><br>
+                    <label>Discounted Total Amount: &#8377;</label>
+                    <label id="total-discount-amount"></label><br>
+                    <label>Total Amount + Tax: &#8377; </label>
+                    <label id="total-cart-amount"></label><br>
+                    <button type="button" class="btn btn-default" data-dismiss="modal" onclick="purchase()">Purchase</button>            
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Shop again</button>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
+    <footer class="text-center">
+        <div>
+            <h4>&copy; Shop On Retail Pvt. Ltd.</h4>
+        </div>
+    </footer>
+	<script type="text/javascript" src="assets/js/jquery.min.js"></script>
+	<script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+    <!-- <script src="assets/js/jquery-3.2.1.min.js"></script> -->
+</body>
+</html>
